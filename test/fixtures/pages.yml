@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pagename: MyString
+  pagetitle: MyString
+  pagebody: MyText
+  password_digest: MyString
+  pagesecured: false
+
+two:
+  pagename: MyString
+  pagetitle: MyString
+  pagebody: MyText
+  password_digest: MyString
+  pagesecured: false

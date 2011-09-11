@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docly3</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%# javascript_include_tag :on_the_spot %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= link_to image_tag("docly2.png", :align => "left"), "/"%>
+	<br/><br/><br/>
+	
+<%= yield %>
+
+</body>
+</html>

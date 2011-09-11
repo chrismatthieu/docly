@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <p>
+  <b>Pagename:</b>
+  <%# @page.pagename %>
+</p> -->
+
+<center>
+	<h1>
+		<div id="generalform">
+		
+		<% if @page.pagetitle %>
+			<%= on_the_spot_in_tree_edit @page, :pagetitle, :tooltip => "Click to edit page title" %>
+		<% else %>
+			<%= on_the_spot_in_tree_edit @page, :pagetitle, :display_text => "Page Title", :tooltip => "Click to edit page title" %>
+		<% end %>
+		</div>
+	</h1>
+
+	<div id="contentwrap">
+
+		<div id="generalform">
+		<p>
+			<% if @page.pagebody %>
+				<%= on_the_spot_in_tree_edit @page, :pagebody, :type => :textarea, :rows => "20", :columns => "60" %>
+			<% else %>
+				<%= on_the_spot_in_tree_edit @page, :pagebody, :type => :textarea, :rows => "20", :columns => "60", :display_text => "Page Body" %>
+			<% end %>
+			<%#raw(@page.pagebody)%>
+		</p>
+		</div>
+
+
+<!-- <p>
+  <b>Pagesecured:</b>
+  <%# @page.pagesecured %>
+</p> -->
+
+	</div>
+	
+	<div id="generalform">
+	<p>
+		
+		<%# if @page.copyright %>
+			<%# on_the_spot_in_tree_edit @page, :copyright, :type => :select, :data => [["All Rights Reserved", 'All Rights Reserved'], ["http://creativecommons.org/licenses/by/3.0/", 'Creative Commons Attribution 3.0 Unported'], ["http://creativecommons.org/licenses/by-sa/3.0/", 'Attribution-ShareAlike 3.0 Unported'], ["http://creativecommons.org/licenses/by-nc/3.0/", 'Attribution-NonCommercial 3.0 Unported'], ["http://creativecommons.org/licenses/by-nd/3.0/", 'Attribution-NoDerivs 3.0 Unported'], ["http://creativecommons.org/licenses/by-nc-nd/3.0/", 'Attribution-NonCommercial-NoDerivs 3.0 Unported'], ["http://creativecommons.org/licenses/publicdomain/", 'Public Domain'], ["http://creativecommons.org/publicdomain/zero/1.0/", 'CC0 1.0 Universal']] %>
+		<%# else %>
+			<%# on_the_spot_in_tree_edit @page, :copyright, :type => :select, :display_text => "All Rights Reserved",:data => [["All Rights Reserved", 'All Rights Reserved'], ["http://creativecommons.org/licenses/by/3.0/", 'Creative Commons Attribution 3.0 Unported'], ["http://creativecommons.org/licenses/by-sa/3.0/", 'Attribution-ShareAlike 3.0 Unported'], ["http://creativecommons.org/licenses/by-nc/3.0/", 'Attribution-NonCommercial 3.0 Unported'], ["http://creativecommons.org/licenses/by-nd/3.0/", 'Attribution-NoDerivs 3.0 Unported'], ["http://creativecommons.org/licenses/by-nc-nd/3.0/", 'Attribution-NonCommercial-NoDerivs 3.0 Unported'], ["http://creativecommons.org/licenses/publicdomain/", 'Public Domain'], ["http://creativecommons.org/publicdomain/zero/1.0/", 'CC0 1.0 Universal']] %>
+			<%# on_the_spot_in_tree_edit @page, :copyright, :type => :select, :display_text => "All Rights Reserved",:data => [[1, 'All Rights Reserved'], [2, 'Creative Commons Attribution 3.0 Unported'], [3, 'Attribution-ShareAlike 3.0 Unported'], [4, 'Attribution-NonCommercial 3.0 Unported'], [5, 'Attribution-NoDerivs 3.0 Unported'], [6, 'Attribution-NonCommercial-NoDerivs 3.0 Unported'], [7, 'Public Domain'], [8, 'CC0 1.0 Universal']] %>
+		<%# end %>
+	</p>
+	</div>
+
+
+	<%= link_to 'Back', root_path %>
+
+</center>

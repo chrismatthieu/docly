@@ -1,0 +1,36 @@
+<%= form_for(@page) do |f| %>
+  <% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pagename %><br />
+    <%= f.text_field :pagename %>
+  </div>
+  <div class="field">
+    <%= f.label :pagetitle %><br />
+    <%= f.text_field :pagetitle %>
+  </div>
+
+<!-- <p>Pagetitle: <%# on_the_spot_edit @page, :pagetitle %></p> -->
+
+  <div class="field">
+    <%= f.label :pagebody %><br />
+    <%= f.text_area :pagebody %>
+  </div>
+  <div class="field">
+    <%= f.label :pagesecured %><br />
+    <%= f.check_box :pagesecured %>
+  </div>
+  <div class="actions">
+    <p><%= f.submit %></p>
+  </div>
+<% end %>
