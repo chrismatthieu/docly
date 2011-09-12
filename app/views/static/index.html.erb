@@ -27,8 +27,10 @@
 <td valign="top">
 	<h2>List of recently created public docs</h2>
 	<% @pages.each do |page| %>
-		<p><%= link_to page.pagename, "/" + page.pagename %> (<%= page.pagetitle %>)
-	    <%= page.pagebody[0..150] %>...</p>
+		<% if page.pagename %>
+			<p><%= link_to page.pagename, "/" + page.pagename %> (<%= page.pagetitle rescue ""%>)
+		    <%= page.pagebody[0..150] rescue ""%>...</p>
+		<% end %>
 	<% end %>
 	
 </td></tr></table>
