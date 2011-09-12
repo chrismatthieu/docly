@@ -6,6 +6,8 @@
 </p> -->
 
 <center>
+<% if session[:page_id] == @page.id %>
+
 	<h1>
 		<div id="generalform">
 		
@@ -50,7 +52,20 @@
 	</p>
 	</div>
 
+<% else %>
 
-	<%= link_to 'Back', root_path %>
+<h1>
+<%=@page.pagetitle%>
+</h1>
+
+<div id="contentwrap">
+	<%=raw(@page.pagebody)%>
+</div>	
+<%= link_to 'Edit page', "/password/" + @page.pagename  %> |
+
+<% end %>
+
+	
+	<%= link_to 'Create new page', new_page_path %>
 
 </center>

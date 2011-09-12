@@ -25,10 +25,10 @@
 </div>
 </td>
 <td valign="top">
-	<h2>List of recent public docs</h2>
+	<h2>List of recently created public docs</h2>
 	<% @pages.each do |page| %>
-		<%= link_to page.pagename, "/" + page.pagename %> (<%= page.pagetitle %>)
-	    <%= page.pagebody[0..150] %>...
+		<p><%= link_to page.pagename, "/" + page.pagename %> (<%= page.pagetitle %>)
+	    <%= page.pagebody[0..150] %>...</p>
 	<% end %>
 	
 </td></tr></table>
