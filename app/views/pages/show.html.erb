@@ -55,11 +55,11 @@
 <% else %>
 
 <h1>
-<%=@page.pagetitle%>
+<%=@page.pagetitle %>
 </h1>
 
 <div id="contentwrap">
-	<%=raw(@page.pagebody)%>
+	<%=raw(@page.pagebody.gsub(/(\r)?\n/, "<br />"))%>
 </div>	
 <%= link_to 'Edit page', "/password/" + @page.pagename  %> |
 
