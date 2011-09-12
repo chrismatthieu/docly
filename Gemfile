@@ -5,7 +5,13 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+	gem 'mysql2'
+end
+
 # gem "on_the_spot"
 gem 'on_the_spot_in_tree', :git=>'https://github.com/ciscoriordan/on_the_spot_in_tree'
 
