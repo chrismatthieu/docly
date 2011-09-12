@@ -3,8 +3,6 @@
 	<h2>The easiest way to author, publish, and copyright documents online.</h2>
 </center>
 
-<br/>
-
 <p id="notice"><%= notice %></p>
 
 <table><tr><td>
@@ -15,7 +13,7 @@
 <div id="generalform">
 <%= form_tag(:controller=>"pages", :method=>:get) do |f| %>
   <div class="field">
-	<label for="pagename">Page name:<br/>
+	<label for="pagename">Page name<br/>
       <%= text_field("page", "pagename") -%>
   </div>
   <div class="actions">
