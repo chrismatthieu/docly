@@ -1,7 +1,9 @@
 class StaticController < ApplicationController
   def index
     @page = Page.new
-    @pages = Page.where('pagesecured != true').order("created_at desc")
+    # @pages = Page.where('pagesecured != true').order("created_at desc")
+    @pages = Page.paginate :page => params[:page], :per_page => 10, :order => 'created_at DESC', :conditions => ['pagesecured != true']
+    
   end
   
   def authenticate
